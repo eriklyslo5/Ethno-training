@@ -1,0 +1,704 @@
+[
+  {
+    "name": "African Alpinoid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "The most brachycephalic Maghrebi type, shows close morphological similarities to Alpines and in a lower degree to Armenids and Berberids. Probably not directly related to other Alpines, but the result...",
+    "traits": "Skin: Light brown, Hair: Straight or wavy, brown to black, Eyes: Usually dark, sometimes mixed, Height: Medium, Build: Mesoskelic, endomorph, Skull: Rather brachycephalic, orthocranic, Nose: Leptorrhine, straight or convex",
+    "region": "Africa",
+    "url": "pages/phenotypes/AfricanAlpinoid.html"
+  },
+  {
+    "name": "Ainuid",
+    "type": "basic",
+    "group": "Anthropological Types",
+    "description": "Ancient East Asian type that has mostly been restricted to Northern Japan (especially Hokkaido), Sakhalin, and the Kuril Islands in recent centuries. In prehistorical periods probably more widespread ...",
+    "traits": "Height: Short, Build: Thickset, robust, Skull: Long, Face: Robust structure, Eyes: Deep-set, without Mongolian fold, Skin: Fair, Hair texture: Wavy or curly",
+    "region": "Asia",
+    "url": "pages/phenotypes/Ainuid.html"
+  },
+  {
+    "name": "Alpinid",
+    "type": "basic",
+    "group": "Anthropological Types",
+    "description": "Short-headed group with roundish features, often brown-haired with fair to light-brown skin. Body tends to be thickset, height modest. Cheekbones weak, nose short and small, sometimes concave, chin sm...",
+    "traits": "Height: Modest, Build: Thickset, Skull: Short-headed (brachycephalic), Face: Roundish, Cheekbones: Weak, Nose: Short and small, sometimes concave, Chin: Small and round",
+    "region": "Unknown",
+    "url": "pages/phenotypes/Alpinid.html"
+  },
+  {
+    "name": "Anglo",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "North-West European type, similar to Trønder, but with a stronger Hallstatt component. Was typified by the ancient Germanic tribes of Angles, Saxons, and Jutes who conquered Britain from the 5th centu...",
+    "traits": "Skin: Pale, Hair: Straight to curly, Hair Color: Often blonde, sometimes red or brown, Eyes: Light to light-mixed, Height: Rather tall, Build: Ectomorph to mesomorph",
+    "region": "Europe",
+    "url": "pages/phenotypes/AngloSaxon.html"
+  },
+  {
+    "name": "Arabid",
+    "type": "local",
+    "group": "Orientalid",
+    "description": "Orientalid proper, the most common type of the Arabian Peninsula, often found with Semitic languages.\n            Originally restricted to Arabia, ancient migrations and the Islamic expansion brought ...",
+    "traits": "Height: Medium, Build: Mesoskelic, ectomorph, Skull: Dolicho- mesocephalic, chamaecranic, Face: Prominent midface, rhomboid head, Nose: Slightly convex, hyperleptorrhine, Skin: Light, sometimes medium brown, Hair color: Black-brown",
+    "region": "Asia",
+    "url": "pages/phenotypes/Arabid.html"
+  },
+  {
+    "name": "Bantuid",
+    "type": "basic",
+    "group": "Sub-Saharan African",
+    "description": "Widespread type, native to the savannah regions of the southern African hemisphere. Skulls tend to be long and low, noses wide, lips full, chin small, forehead high, facial features robust, and hair k...",
+    "traits": "Skull: Long and low, Nose: Wide, Lips: Full, Chin: Small, Forehead: High, Facial features: Robust, Hair: Kinky",
+    "region": "Africa",
+    "url": "pages/phenotypes/Bantuid.html"
+  },
+  {
+    "name": "Berberid",
+    "type": "local",
+    "group": "Mediterranid",
+    "description": "A Proto Atlanto Mediterranean type, originally named after Berbers and the North African Barbary.\n            Associated with Paleolithic types that once migrated from West Asia. Present in modern Ber...",
+    "traits": "Height: Rather short, Build: Mesoskelic, meso- to endomorph, Skull: Dolichocephalic, chamae- orthocranic, Face: Coarse and wide, Nose: Mildly leptorrhine, sometimes mesorrhine, Skin: Light to medium brown, Hair color: Brown to black",
+    "region": "Africa",
+    "url": "pages/phenotypes/Berberid.html"
+  },
+  {
+    "name": "Bobo",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Sudanid variety with shorter skulls than Sudanids proper, and several other unique features that set it apart from other neighbouring groups. Similar to the Casamance type, but taller and wider-faced....",
+    "traits": "Skin: Dark brown, sometimes black, Hair: Usually kinky, Height: Tall, Build: (Hyper-)brachyskelic, mesomorph, Skull: Mesocephalic, mildly hypsicranic, Nose: (Hyper-)platyrrhine, relatively short, Face: Large with large mouth, bulging lips",
+    "region": "Africa",
+    "url": "pages/phenotypes/Bobo.html"
+  },
+  {
+    "name": "Brachio Melanesid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Atypical brachycephalic Melanesid variety native to Melanesia and New Guinea. In its most pronounced form in the Kerewo of Goaribari Island in the Papua Gulf - and the related Kiwai. Another centre li...",
+    "traits": "Height: Medium-height to rather short, Build: Brachyskelic, mesomorph to endomorph, Arms: Long, Skull: Mildly brachycephalic, Cranial height: Orthocranic, Nose: Mildly platyrrhine, high-rooted, Lips: Relatively thick, but not bulging",
+    "region": "Americas",
+    "url": "pages/phenotypes/BrachioMelanesid.html"
+  },
+  {
+    "name": "Bukaid",
+    "type": "local",
+    "group": "Melanesid",
+    "description": "Melanesid variety, associated with the ancient \"Walzenbeil\" culture. Has sometimes been described as bantuiform, although no close genetic relationship to Africans exists. Dominant in the Western Solo...",
+    "traits": "Height: Medium, Build: Mesoskelic, Body type: Ecto- to mesomorph, Skull: Mesocephalic, Skull height: Mildly hypsicranic, Face: Relatively soft features, Nose: Straight or mildly convex, platyrrhine",
+    "region": "Africa",
+    "url": "pages/phenotypes/Bukaid.html"
+  },
+  {
+    "name": "Canarid",
+    "type": "local",
+    "group": "Mediterranid",
+    "description": "Maghrebi type with similarities to Cromagnids and North Europeans - probably in part a result of\n            convergent evolution of pre-Neolithic North Africans adapting to cloudy mountain regions, a...",
+    "traits": "Height: Tall, Build: Mesoskelic, ectomorph to mesomorph, Skull: Mesocephalic, chamae- orthocranic, Face: Broad, sometimes a bit low, Nose: Mildly leptorrhine, Skin: Fair, Hair color: Wavy reddish, brown or blonde",
+    "region": "Europe",
+    "url": "pages/phenotypes/Canarid.html"
+  },
+  {
+    "name": "Casamance",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Type of the Sudanid-Guinesid contact belt with a variety of unique features that set it apart from other groups. Most common in the lower Casamance region of West Africa in South Senegal, Gambia, and ...",
+    "traits": "Skin: Dark brown, sometimes black, Hair: Usually kinky, Height: Medium height or rather tall, Build: (Hyper-)brachyskelic, mesomorph, Skull: Mesocephalic, orthocranic, Nose: Platyrrhine, Face: Large with big eyes, bulging lips",
+    "region": "Africa",
+    "url": "pages/phenotypes/Casamance.html"
+  },
+  {
+    "name": "Central Ethiopid",
+    "type": "local",
+    "group": "Ethiopid",
+    "description": "Ethiopid subtype of the central Ethiopian highlands and their surroundings. Found in its purest form among Oromos. Also in other Cushitic speakers like Somalis, Borana, Konso, and Sidama, here often m...",
+    "traits": "Height: Medium to tall, Build: Ectomorph to mesomorph, Legs: Brachyskelic (short-legged), Skull: Mesocephalic, rarely brachycephalic, Skull height: Orthocranic, Face: Smaller-headed than North Ethiopid, Nose: Lepto-mesorrhine, relatively high, straight or convex",
+    "region": "Africa",
+    "url": "pages/phenotypes/CentralEthiopid.html"
+  },
+  {
+    "name": "Chopi",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Bantuid variety, overall similar to Central Bantuid, but with weak Khoisan influence, placing it closer to Xhosaid. Developed as a result of the Bantu expansion when Bantu assimilated some older Khois...",
+    "traits": "Skin: Yellowish dark, sometimes medium brown, Hair: Usually kinky, sometimes peppercorn, Height: (Rather) tall, Build: Mildly brachyskelic, mesomorph, Skull: Dolichocephalic to hyperdolichocephalic, Head Shape: Chamae- sometimes orthocranic, narrower than other Bantuids, Nose: Platyrrhine",
+    "region": "Africa",
+    "url": "pages/phenotypes/ChopiTswana.html"
+  },
+  {
+    "name": "Choshiu",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Gracilised variant of the Manchu-Korean type, named after the old Japanese Choshu Domain. Once common in Chinese-Korean aristocracy. Today mainly found in Japan. Can be placed in North Sinid. Probably...",
+    "traits": "Height: Rather short to medium, Build: Macroskelic, ectomorph, Skull: Mesocephalic, sometimes dolichocephalic, Cranial height: Mildly hypsicranic, Nose: Mildly leptorrhine, sometimes convex, Face: Narrow and elongated, Mouth: Small",
+    "region": "Asia",
+    "url": "pages/phenotypes/Choshiu.html"
+  },
+  {
+    "name": "Congolid",
+    "type": "basic",
+    "group": "Anthropological Types",
+    "description": "Widespread Central African type, typical for the agricultural forest populations. Compared to savannah types (Sudanids, Bantuids) legs are shorter with big calves, stature lower and more thickset, fac...",
+    "traits": "Height: Lower, Build: Thickset, Legs: Shorter with big calves, Face: Broader, Nose: More depressed root, Skin: Fairer (compared to savannah types), Body hair: Stronger",
+    "region": "Africa",
+    "url": "pages/phenotypes/Congolid.html"
+  },
+  {
+    "name": "Danakil",
+    "type": "local",
+    "group": "Ethiopid",
+    "description": "Specialized Ethiopid type living in the hottest region of the world: the Danakil depression of Eritrea and Northern Ethiopia, with an annual average temperature of more than 34°C. Most common in the A...",
+    "traits": "Height: Rather short (shortest of all Ethiopids), Build: Endomorph to ectomorph, Skull: Mesocephalic, sometimes dolichocephalic, Skull height: Orthocranic, Face: Relatively soft features, Nose: Mildly leptorrhine, Nose width: Narrower than North Ethiopids, wider than East Ethiopids",
+    "region": "Africa",
+    "url": "pages/phenotypes/Danakil.html"
+  },
+  {
+    "name": "Dayakid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Proto Malayid subtype, the insular counterpart of Palaungids, predates the arrival of Deutero Malayids. Has thus developed a stronger tropical adaption, showing Brasiliform features. Usually found in ...",
+    "traits": "Height: Short, Build: Meso-brachyskelic, endomorph to ectomorph, Skull: Mesocephalic, Cranial height: Mildly hypsicranic, Nose: Mildly platyrrhine, concave, Face: Broad, angular and low, Brow ridges: Marked",
+    "region": "Unknown",
+    "url": "pages/phenotypes/Dayakid.html"
+  },
+  {
+    "name": "Dinkaid",
+    "type": "local",
+    "group": "Nilotid",
+    "description": "Nilotid proper that shows the most pronounced Nilotic features: the tallest, most long-legged and one of the darkest phenotypes in the world. Typically found in the swamp areas of the Upper Nile in So...",
+    "traits": "Height: Very tall (tallest worldwide), Build: Hyperbrachyskelic, Body type: Extremely ectomorph, Hips: Thin, Upper body: Rather gracile, Skull: (Hyper-)dolichocephalic, Skull height: Mildly hypsicranic",
+    "region": "Africa",
+    "url": "pages/phenotypes/Dinkaid.html"
+  },
+  {
+    "name": "East Alpinid",
+    "type": "local",
+    "group": "Alpinid",
+    "description": "West Asian type that is anthropometrically and morphologically very similar to European Alpinids. Most common in the mountain zones of Anatolia, to Northern Syria and Iraq. Also found in West Iran, Ca...",
+    "traits": "Height: Medium to rather tall, Build: Mesoskelic, endomorph, Skull: Brachycephalic, ortho-hypsicranic, Face: Round, Nose: Leptorrhine with roundish tip, Mouth: Rather thin, Skin: Light brown",
+    "region": "Europe",
+    "url": "pages/phenotypes/EastAlpinid.html"
+  },
+  {
+    "name": "East Ethiopid",
+    "type": "local",
+    "group": "Ethiopid",
+    "description": "Ethiopid proper, showing the most pronounced Ethiopid characters of all. Common around the Horn of Africa, in its purest form in the inland areas of Somalia and Eastern Ethiopia. Typical groups includ...",
+    "traits": "Height: Rather tall, Build: Ectomorph, Legs: Brachyskelic (short-legged), Skull: Dolichocephalic, Skull height: Orthocranic, Face: Long, oval with gracile, soft features, Jaw: Very narrow",
+    "region": "Africa",
+    "url": "pages/phenotypes/EastEthiopid.html"
+  },
+  {
+    "name": "East Shanid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Eastern variety of Shanid, weakly influenced by Veddid. Typical for the plains and river valleys of Indochina, especially from North Thailand to Laos. Probably migrated South from China in historic ti...",
+    "traits": "Height: Medium, Build: Macro-mesoskelic, ectomorph, Skull: Hyper-brachycephalic, Nose: Relatively high, meso-leptorrhine, Face: Relatively long, more elongated than Palaungid, Face flatness: Not as flat as Sinid, Face shape: Round, refined and gracile",
+    "region": "Asia",
+    "url": "pages/phenotypes/EastShanid.html"
+  },
+  {
+    "name": "East Sudanid",
+    "type": "local",
+    "group": "Sudanid",
+    "description": "Isolated Sudanid variety of the Nuba mountains in Kurdufan / Sudan, native to the region at least since the Neolithic. Has resisted historic invasions of neighbouring types over a long time. However, ...",
+    "traits": "Height: Tall, Build: Mesomorph, Legs: Long-legged, Skull: Mesocephalic, sometimes dolichocephalic, Skull height: Mildly hypsicranic, Face: Large with relatively narrow eyelids, Frontoparietal region: Flattened",
+    "region": "Africa",
+    "url": "pages/phenotypes/EastSudanid.html"
+  },
+  {
+    "name": "Equatorial Sudanid",
+    "type": "local",
+    "group": "Congolid",
+    "description": "Central African variety with Sudanid and Congolid elements, living in the Savanna regions of East Cameroon, Central African Republic, South Sudan, and even Gabon and Uganda. May be found in Azande, Ba...",
+    "traits": "Height: Rather tall, Build: Often mesomorph, Legs: Brachyskelic (short-legged), Skull: Mesocephalic, Face: Comparably narrow, robust with big eyes, Nose: Narrower than Sudanids proper, mildly platyrrhine, often depressed, Prognathism: Pronounced",
+    "region": "Africa",
+    "url": "pages/phenotypes/EquatorialSudanid.html"
+  },
+  {
+    "name": "Ethiopid",
+    "type": "basic",
+    "group": "Anthropological Types",
+    "description": "Widespread African type, typical for regions with hot and dry climate. Ethiopids are characterised by very dark skin with a reddish tint, tight-curly hair, narrow, high nose, a tall, slender stature, ...",
+    "traits": "Height: Tall, Build: Slender, Skull: Long, Face: Long, narrow, Nose: Narrow, high, Skin: Very dark with reddish tint, Hair texture: Tight-curly",
+    "region": "Africa",
+    "url": "pages/phenotypes/Ethiopid.html"
+  },
+  {
+    "name": "Eurafricanid",
+    "type": "local",
+    "group": "Mediterranid",
+    "description": "Atlanto Mediterranid proper type. Relatively old, present in early Natufians and European as well as\n            North African megalith builders. Spread across the Mediterranean since the Mesolithic u...",
+    "traits": "Height: Rather tall, Build: Ecto- to mesomorph, brachy- mesoskelic, Skull: Dolichocephalic, mildly hypsicranic, Face: Coarse and long, deep set eyes, Nose: Straight, sometimes depressed and leptorrhine, Skin: Light brown, Hair color: Usually dark brown",
+    "region": "Europe",
+    "url": "pages/phenotypes/Eurafricanid.html"
+  },
+  {
+    "name": "Fengu",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Bantuid variety, similar to South Bantuid, but with weak Khoisan influence, placing it closer to Xhosaid. Developed as a result of the Bantu expansion when Bantu assimilated some older Khoisanid eleme...",
+    "traits": "Skin: Yellowish dark, sometimes medium brown, Hair: Usually kinky, sometimes peppercorn, Height: Rather tall, Build: Often mesoskelic, mesomorph to endomorph, Skull: Often mesocephalic, sometimes dolichocephalic, Head Shape: Chamae- orthocranic, wider and lower than other Bantuids, Nose: Platyrrhine",
+    "region": "Africa",
+    "url": "pages/phenotypes/FenguPondo.html"
+  },
+  {
+    "name": "Fenno Nordid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Ancient type of Northeastern Europe, sometimes placed in Nordid, sometimes East Baltid. Associated with Finno-Ugric people, once widespread in Russia. Today a minority element in Eastern Finns, e.g. M...",
+    "traits": "Skin: Pale, Hair: Straight, Hair Color: Red to white-blonde, sometimes reddish-brown, Eyes: Light, often water-blue, Height: Rather tall, Build: Ecto-mesomorph, angular",
+    "region": "Europe",
+    "url": "pages/phenotypes/FennoNordid.html"
+  },
+  {
+    "name": "Fezzanid",
+    "type": "local",
+    "group": "Mediterranid",
+    "description": "Saharan type combining ancient elements including Berberid with sub-Saharan elements that often\n            entered the region during the Middle Ages. Common in Fezzanesi of South Libya, the Iravellan...",
+    "traits": "Height: Medium, Build: Brachyskelic, ectomorph, Skull: Dolichocephalic, orthocranic, Face: Flat and wide, very weak or absent prognathy, Nose: Mildly platyrrhine, relatively high, Skin: Light to dark brown, Hair texture: Curly to kinky",
+    "region": "Africa",
+    "url": "pages/phenotypes/Fezzanid.html"
+  },
+  {
+    "name": "Guineo Camerunian",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "West African type, the shorter-skulled counterpart of Guinesids. May constitute the transition to Congolesids. Common in forest regions of Côte d'Ivoire, Benin, Liberia, Ghana, Togo, Nigeria, and West...",
+    "traits": "Skin: Usually dark, sometimes medium brown, Hair: Kinky, Height: Medium height to rather tall, Build: Mesoskelic, endomorph to mesomorph, Skull: Mesocephalic, Head Shape: Orthocranic, round-headed, Nose: (Hyper-)platyrrhine, depressed and short",
+    "region": "Africa",
+    "url": "pages/phenotypes/GuineoCamerunian.html"
+  },
+  {
+    "name": "Hallstatt",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Nordid proper, resembles the Iron Age remains of the Austrian village of Hallstatt. Most common among Swedes and South Norwegians. Frequent in England, Northern Germany, Netherlands, Northern France, ...",
+    "traits": "Skin: Pinkish pale, Hair: Straight to wavy, Hair Color: Golden blonde, sometimes red or light brown, Eyes: (Grey-)blue, Height: Tall, Build: Ectomorph or mildly mesomorph",
+    "region": "Europe",
+    "url": "pages/phenotypes/Hallstatt.html"
+  },
+  {
+    "name": "Indid",
+    "type": "basic",
+    "group": "Anthropological Types",
+    "description": "Mediterranoid group, mostly concentrated on the Indian subcontinent. Generally dark haired with light to medium brown skin and long-headed. Forehead high, relatively narrow, straight nose, often graci...",
+    "traits": "Skull: Long-headed, Hair: Dark, Skin: Light to medium brown, Forehead: High, narrow, Nose: Straight, Chin: Modeled, Eyes: Almond-shaped, large",
+    "region": "Asia",
+    "url": "pages/phenotypes/Indid.html"
+  },
+  {
+    "name": "Indo Melanid",
+    "type": "basic",
+    "group": "Anthropological Types",
+    "description": "Contact group betweenIndidandVeddid, mostly concentrated in the Indian subcontinent. Features appear overall Caucasian, the hair is wavy, the root of the triangular nose relatively high and wider than...",
+    "traits": "Features: Overall Caucasian, Hair: Wavy, Nose: Triangular, high root, wider than Indids, Lips: Not very thick, Skin: Very dark brown (darker than Veddids), Morphology: Affinities to Ethiopids",
+    "region": "Asia",
+    "url": "pages/phenotypes/IndoMelanid.html"
+  },
+  {
+    "name": "Insular Melanesid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Melanesid proper, associated with many Austronesian speakers of Melanesia. Similar to Paleo Melanesid, but with softer features. Common in East Papua, New Britain, New Ireland, Admiralty Islands, East...",
+    "traits": "Height: Short to medium, Build: Endo- to ectomorph, Limbs: Brachy- sometimes mesoskelic, Skull: Dolicho- to mesocephalic, hypsicranic, Face: Comparatively long, softer features, Nose: Mildly platyrrhine snub, often concave, Skin: Dark brown",
+    "region": "Oceania",
+    "url": "pages/phenotypes/InsularMelanesid.html"
+  },
+  {
+    "name": "Khoid",
+    "type": "basic",
+    "group": "Anthropological Types",
+    "description": "Special group, typical for the old agricultural population of Southern Africa with many unique features, adapted to dry climate. Very ancient and distinct. Stature is rather short, the bodies are lean...",
+    "traits": "Stature: Rather short, Build: Lean, Skin: Yellowish light brown, wrinkled, Hair: Peppercorn, Nose: Very wide, Eye folds: Frequent, Skull: Long and low",
+    "region": "Africa",
+    "url": "pages/phenotypes/Khoid.html"
+  },
+  {
+    "name": "Kolid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "North Dravidian type, related to Melanids but with stronger Gondid influence. An important population element in India. Purest in Jharkhand and West Bengal, particularly in Kolarians. Typical in Santh...",
+    "traits": "Skin: Black-brown, darker than most Veddoids, Hair: Curly or wavy, Height: Short, Leg length: Mesoskelic, Build: Ectomorph, sometimes endomorph, Skull: Dolicho- to mesocephalic",
+    "region": "Asia",
+    "url": "pages/phenotypes/Kolid.html"
+  },
+  {
+    "name": "Litorid",
+    "type": "local",
+    "group": "Armenoid",
+    "description": "Type of coastal European regions that contains Mediterranid and Dinaro-Armenid elements. Probably\n            the result of ancient migrations from Asia Minor across the sea. Found from Lebanon and So...",
+    "traits": "Height: Rather tall, Build: Ecto- to endomorph, meso- sometimes macroskelic, Skull: Mesocephalic, mildly hypsicranic, Face: Oval, Nose: Hyperleptorrhine, often convex, prominent, Skin: Light brown, Hair color: Brown or black",
+    "region": "Europe",
+    "url": "pages/phenotypes/Litorid.html"
+  },
+  {
+    "name": "Maasai",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Ancient South Ethiopid subtype, influenced by Nilo Hamitic and possibly Sandawe. Has probably been isolated in a remote region west of Lake Turkana some centuries ago. Only from the 15th century on th...",
+    "traits": "Skin: Dark brown, Hair: Kinky or tight-curly, Height: Tall, Build: Ectomorph, hyperbrachyskelic, Skull: Dolichocephalic, Skull height: Chamae-orthocranic, Nose: Long, mildly leptorrhine",
+    "region": "Unknown",
+    "url": "pages/phenotypes/Maasai.html"
+  },
+  {
+    "name": "Mediterranid",
+    "type": "basic",
+    "group": "Anthropological Types",
+    "description": "Widespread group, common all over the Mediterranean and adjacent regions. Long-headed, dark-eyed, with light brown skin, and straight to curly, often dark and abundant hair. Occiput protruding, chin s...",
+    "traits": "Skull: Long-headed, Eyes: Dark, Skin: Light brown, Hair: Straight to curly, dark, Chin: Small, well-modeled, Mouth: Small, Occiput: Protruding",
+    "region": "Unknown",
+    "url": "pages/phenotypes/Mediterranid.html"
+  },
+  {
+    "name": "Melanesid",
+    "type": "basic",
+    "group": "Anthropological Types",
+    "description": "The dominant type of New Guinea and Melanesian islands. The name derives frommelas(Greek) = black, andnesos= island. Probably developed through various migrations from South-East Asia during the Paleo...",
+    "traits": "Height: Variable, Build: Robust, Limbs: Long, Face: Robust, often with supraorbital arches, Nose: Wide, relatively high, Lips: Full, Skin: Medium brown to black",
+    "region": "Asia",
+    "url": "pages/phenotypes/Melanesid.html"
+  },
+  {
+    "name": "Mexicid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Margid proper. Probably arrived with one of the earlier migrations to America. Typified by Otomi, Purépecha, Pame, Pima of Mexico, as well West Mono and Pomo of California. More mixed in Maidu, Aztecs...",
+    "traits": "Skin: Reddish medium to dark brown, Hair: Straight black, Height: Rather short, Build: Endomorph, sometimes ectomorph, Leg length: Meso- to macroskelic, Skull: Mesocephalic, sometimes dolichocephalic",
+    "region": "Americas",
+    "url": "pages/phenotypes/Mexicid.html"
+  },
+  {
+    "name": "Mountain Melanesid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Melanesian mountain variety, relatively ancient with similarities to Paleo Melanesid. Found mainly among New Guinean highlanders like Dani, Moni, Ekagi, Mbowamb, Enga, Paniani, Yali, and many others. ...",
+    "traits": "Height: Rather short, Build: Mesomorph, Limbs: Very long arms and legs, Skull: Mesocephalic to brachycephalic, mildly hypsicranic, Head: Relatively large, Face: Robust and wide, Nose: Platyrrhine, relatively low or mildly convex",
+    "region": "Oceania",
+    "url": "pages/phenotypes/MountainMelanesid.html"
+  },
+  {
+    "name": "Mtebid",
+    "type": "local",
+    "group": "Alpinid",
+    "description": "Regional type of the Caucasus Mountains. Probably an Alpinised Dinaro-Armenid adapted to life in\n            mountainous regions. Mtebids are typical of the Georgian population and common among Cheche...",
+    "traits": "Height: Medium, Build: Mesoskelic-brachyskelic, endomorph to mesomorph, Skull: Brachycephalic, hypsicranic, Face: Broad, Nose: Straight to convex, hyperleptorrhine, Skin: Light brown, Hair color: Usually brown",
+    "region": "Asia",
+    "url": "pages/phenotypes/Mtebid.html"
+  },
+  {
+    "name": "Negritid",
+    "type": "basic",
+    "group": "Anthropological Types",
+    "description": "Very ancient South Asian type that probably arrived with an early Out-of-Africa migration via oceanic routes. Negritids are very short, males often below 150 cm, and have dark brown to black skin, kin...",
+    "traits": "Height: Very short (males often below 150 cm), Build: Adultiform proportions, Skull: Relatively short, Face: Gracile features, Nose: Not very wide, Skin: Dark brown to black, Hair: Kinky",
+    "region": "Africa",
+    "url": "pages/phenotypes/Negritid.html"
+  },
+  {
+    "name": "Neo Melanesid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Melanesid subtype of New Guinea. Found especially in lowlands and river plains, with its highest concentration in the south of the island. More common in Papuan speakers. Also in the Torres Strait, Ce...",
+    "traits": "Height: Variable, often medium-tall, Build: Ectomorph to mesomorph, Limbs: Brachyskelic, long arms, Skull: Mesocephalic to dolichocephalic, mildly hypsicranic, Face: Finer features than Mountain Melanesids, Nose: Mildly platyrrhine or mesorrhine, long, high-rooted, convex, fleshy, Skin: Dark brown, sometimes medium brown",
+    "region": "Oceania",
+    "url": "pages/phenotypes/NeoMelanesid.html"
+  },
+  {
+    "name": "Nilotid",
+    "type": "basic",
+    "group": "Anthropological Types",
+    "description": "Specialised African type, native to the swamps and savannahs of the Upper Nile region in South Sudan and adjacent countries. With their black skin they belong to the darkest people on Earth. Their thi...",
+    "traits": "Height: Tallest worldwide, Build: Thin, slender, Legs: Longest proportions, Skull: Long, Face: Coarse features, Nose: Rather wide, Lips: Full",
+    "region": "Africa",
+    "url": "pages/phenotypes/Nilotid.html"
+  },
+  {
+    "name": "Nordid",
+    "type": "basic",
+    "group": "Anthropological Types",
+    "description": "Depigmented, rather tall and long to medium-skulled, relatively large-headed group, found in its highest frequencies in Northern Europe. Facial features are marked, curved occiput, orthognathic, nose ...",
+    "traits": "Height: Tall, Build: Rather tall, Skull: Long to medium-skulled, Face: Marked features, Nose: High and narrow, Skin: Depigmented, Forehead: High and slightly receding",
+    "region": "Europe",
+    "url": "pages/phenotypes/Nordid.html"
+  },
+  {
+    "name": "Norid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Central European type that closely resembles Dinarids except for lighter pigmentation. Authors interpret this to be the result of Nordid and other (e.g. East Europid) admixture. The name derives from ...",
+    "traits": "Skin: Pale to fair, Hair: Straight or wavy, Hair Color: (Ash) blonde, occasionally red, Eyes: Light mixed, often blue or grey, Height: (Rather) tall, Build: Often mesomorph",
+    "region": "Europe",
+    "url": "pages/phenotypes/Norid.html"
+  },
+  {
+    "name": "North Bantuid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Widespread Bantuid variety of East Africa with relatively narrow noses, possibly due to Ethiopid influence. Found from South Somalia to Kenya, Tanzania, Uganda, Zambia, Zimbabwe, especially in Ganda, ...",
+    "traits": "Skin: Dark brown, Hair: Usually kinky, sometimes peppercorn, Height: Medium tall, Build: Brachyskelic, mesomorph, Skull: Dolicho- mesocephalic, Head Shape: Chamae- orthocranic, Face: Rather wide",
+    "region": "Africa",
+    "url": "pages/phenotypes/NorthBantuid.html"
+  },
+  {
+    "name": "North Ethiopid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Ethiopid subtype that is often regarded as a northern branch of East Ethiopid. Common along the Red Sea coast and the Nile Valley from Egypt to Eritrea and deep into the Ethiopian Highlands. Shows som...",
+    "traits": "Skin: Dark to medium brown, Hair: Tight-curly, Height: Medium to tall, Build: Ectomorph, brachyskelic, Skull: Dolicho-mesocephalic, orthocranic, Head: Rather small, Features: Gracile, marked",
+    "region": "Africa",
+    "url": "pages/phenotypes/NorthEthiopid.html"
+  },
+  {
+    "name": "North Gondid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Ancient phenotype native to North Central India, found up to the Himalaya. Gondid proper type, the robust counterpart of South Gondids. Common in Gond, Kurukh, Bhil, Juang, Baiga. More mixed in Chota ...",
+    "traits": "Skin: Dark brown, Hair: Wavy, sometimes curly, Height: Short, Build: Brachyskelic, endomorph to ectomorph, Skull: Dolicho- mesocephalic, Head Shape: Mildly hypsicranic, small-headed, Face: Tends to be low and round, longer than other Veddids",
+    "region": "Asia",
+    "url": "pages/phenotypes/NorthGondid.html"
+  },
+  {
+    "name": "North Pontid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Altered Mediterranoid of Eastern Europe that connects Pontids with more northern types. Most common in a large area from Poland to the Russian city of Penza. Extends north to Finland and south to Mace...",
+    "traits": "Skin: Fair, Hair: Straight or wavy, dark blonde to dark brown, Height: Medium, Build: Mesoskelic, ectomorph to mesomorph, Skull: Mesocephalic, Head Shape: Mildly hypsicranic, Face: Wider than Pontids proper, sharper features",
+    "region": "Europe",
+    "url": "pages/phenotypes/NorthPontid.html"
+  },
+  {
+    "name": "Omotic",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Isolated type of Southwestern Ethiopia and Northern Kenya, probably belonging to a group of ancient Ethiopids. Probably a relict of Pre-Neolithic periods. Most common in speakers of the Omotic languag...",
+    "traits": "Skin: Dark brown, Hair: Kinky-curly, Height: Medium to rather tall, Build: Ectomorph to mesomorph, brachyskelic, Skull: Usually dolichocephalic, orthocranic, Face: Relatively long faced, Nose: Mildly platyrrhine",
+    "region": "Africa",
+    "url": "pages/phenotypes/Omotic.html"
+  },
+  {
+    "name": "Paleo Atlantid",
+    "type": "local",
+    "group": "Mediterranid",
+    "description": "Ancient type that is sporadically found in Northern and Western Europe, usually only in relict populations.\n            A resemblance with Cro-Magnons has been stressed by some authors. Strongest conc...",
+    "traits": "Height: Tall, Build: Meso- to endomorph, mesoskelic to macroskelic, Skull: Dolicho- sometimes mesocephalic, chamae- orthocranic, Face: Wide and low, Nose: Mildly leptorrhine, often concave, Skin: Fair, Hair color: Usually brown-black, occasionally red or blonde",
+    "region": "Europe",
+    "url": "pages/phenotypes/PaleoAtlantid.html"
+  },
+  {
+    "name": "Paleo Saharid",
+    "type": "local",
+    "group": "Ethiopid",
+    "description": "Very ancient type native to the Sahara Desert. Related to Proto Ethiopid, but possibly also shows\n            traces of ancient Khoisanids who were more widespread during the Paleolithic. About 20% of...",
+    "traits": "Height: Rather short, Build: Ectomorph, Skull: Mesocephalic, very low, Face: Coarse, round, and very low, Nose: Platyrrhine with depressed root, high bridge, Skin: Medium brown, sometimes yellowish, Hair texture: Curly or kinky",
+    "region": "Africa",
+    "url": "pages/phenotypes/PaleoSaharid.html"
+  },
+  {
+    "name": "Paleo Sardinian",
+    "type": "local",
+    "group": "Mediterranid",
+    "description": "Ancient type, was widespread in Central Europe during the Neolithic, has survived as a minority\n            element in the mountains of the Italian island of Sardinia. Morphologically similar to Berbe...",
+    "traits": "Height: Short, Build: Meso- to endomorph, mesoskelic, Skull: Dolichocephalic, chamae- orthocranic, rather small-headed, Face: Wide and low, Nose: Mildly leptorrhine or mesorrhine, short, frequently concave, Skin: Light brown, Hair color: Dark, abundant",
+    "region": "Europe",
+    "url": "pages/phenotypes/PaleoSardinian.html"
+  },
+  {
+    "name": "Proto Ethiopid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Ancient type that inhabited the Southwestern Eritrean lowlands prior to the arrival of Ethiopids, and possibly resembles early \"Out of Africa\" types. Was still common from Kenya to Sudan during histor...",
+    "traits": "Height: Medium, Build: Brachyskelic, ectomorph to mesomorph, Skull: Dolichocephalic, small-headed, Face: Robust, bony and elongated, Brow ridges: Often strong, Nose: Straight with relatively high back and depressed tip, Forehead: Sloping",
+    "region": "Africa",
+    "url": "pages/phenotypes/ProtoEthiopid.html"
+  },
+  {
+    "name": "Proto Iranid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Coarse type of Iran and Asia Minor, that can be considered an eastern Eurafricanid variety. More ancient than the more gracile Iranids and Pontids of the region with several Cromagniform features. Tra...",
+    "traits": "Height: Rather tall, Build: Mesoskelic, ectomorph to mesomorph, Skull: Dolicho-mesocephalic, Face: Wider than Pontids and Iranids, Nose: Straight, mildly leptorrhine, broader, Chin: More squared, Features: Some show strong Cromagniform features",
+    "region": "Africa",
+    "url": "pages/phenotypes/ProtoIranid.html"
+  },
+  {
+    "name": "Proto Nordid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Ancient East Nordid variety, the eastern counterpart of the Aisto Nordids. Together with early Mediterranids it was widespread in prehistoric Proto-Indo-European populations of the Eurasian steppes (F...",
+    "traits": "Height: Tall, Build: Mesoskelic, ectomorph to mesomorph, Skull: Dolichocephalic, mildly hypsicranic, Face: Long, Nose: Prominent, long and hyperleptorrhine, sometimes convex, Features: Rather rugged, deep mandible, marked chin, Skin: Pale to fair",
+    "region": "Europe",
+    "url": "pages/phenotypes/ProtoNordid.html"
+  },
+  {
+    "name": "Saharan Ethiopid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Ethiopid type that was more common during the Neolithic when the Sahara was still green. Today it extends from Chad to Niger, Northern Nigeria and even Cameroon. Found in its purest form in the Toubou...",
+    "traits": "Skin: Reddish brown-black, Hair: Tight-curly, Height: Rather tall, Build: Ectomorph, brachyskelic, Skull: Dolicho-mesocephalic, mildly hypsicranic, Nose: Mesorrhine, slightly depressed with high back, Face: Broad and low with angular features",
+    "region": "Africa",
+    "url": "pages/phenotypes/SaharanEthiopid.html"
+  },
+  {
+    "name": "Sandawe",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Distinctive East African type of the Tanzanian savannahs, especially the Dodoma region. A relict of Khoisanid populations that were more widespread prior to the Bantu expansion. Also linked to Maasai....",
+    "traits": "Skin: Usually medium brown, Hair: Kinky or peppercorn, Height: Medium, Build: Ectomorph to endomorph, brachyskelic, Body: Occasionally steatopygic, Skull: Often dolichocephalic, sometimes mesocephalic, Face: Rather wide",
+    "region": "Africa",
+    "url": "pages/phenotypes/Sandawe.html"
+  },
+  {
+    "name": "Sanid",
+    "type": "basic",
+    "group": "Anthropological Types",
+    "description": "Special type of the hunter-gatherer populations of Southern Africa (Bushmen) with many unique features. Shows the most pronounced adaption to dry climate among all humans. Very ancient and distinct. S...",
+    "traits": "Height: Short, Build: Lean, Skull: Medium-long to long and low, Face: Short-faced, infantile features, Nose: Very wide, Skin: Yellow-reddish brown, often wrinkled, Hair: Peppercorn hair",
+    "region": "Africa",
+    "url": "pages/phenotypes/Sanid.html"
+  },
+  {
+    "name": "Semangid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Paleolithic, Negriform phenotype found in the forests of the Malay Peninsula, similar to Aetid. Even older and rarer than the cohabitant Senoids with ~1000 unmixed individuals remaining in relict popu...",
+    "traits": "Skin: Dark (copper) brown, Hair: Kinky, Height: (Very) short, Build: Mesomorph to ectomorph, mesoskelic, Skull: Mildly brachycephalic, hypsicranic, small-headed, Nose: Mesorrhine or mildly platyrrhine, infantile, Face: Low and broad",
+    "region": "Unknown",
+    "url": "pages/phenotypes/Semangid.html"
+  },
+  {
+    "name": "Shari",
+    "type": "local",
+    "group": "Nilotid",
+    "description": "Special type named after the Chari river of Chad. Intermediate between Sudanid and Nilotid, but with several unique features that have long been stabilised. Most common in Southern Chad and Northern C...",
+    "traits": "Height: (Very) tall, Build: Ectomorph, Skull: Mesocephalic/mildly brachycephalic, Skull height: Hypsicranic, Legs: (Hyper-)brachyskelic, Nose: Platyrrhine, Skin: (Bluish/greyish) black",
+    "region": "Africa",
+    "url": "pages/phenotypes/Shari.html"
+  },
+  {
+    "name": "Sonorid",
+    "type": "local",
+    "group": "Margid",
+    "description": "Margid subtype, native to the hot Sonora desert of South Arizona and California, as well as Northwestern Mexico. Probably arrived with one of the earlier migrations to America. Today typified by the P...",
+    "traits": "Group:Margid, Skin: Yellowish-reddish medium to dark brown, Hair: Straight or wavy black, Height: Rather tall, Build: Ectomorph, sometimes endomorph, Legs: Meso- sometimes macroskelic, Skull: Mesocephalic, mildly hypsicranic",
+    "region": "Americas",
+    "url": "pages/phenotypes/Sonorid.html"
+  },
+  {
+    "name": "South Andamanid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Isolated type typical for the Little Andamanese people (Onge, Jarawa, Sentilese). After contact with Europeans in the 19th century populations collapsed, mostly due to disease. A few hundred remain to...",
+    "traits": "Skin: Bluish brown-black, Hair: Kinky or peppercorn, Height: Very short, Build: Ectomorph to endomorph, mesoskelic, Skull: Brachycephalic, mildly hypsicranic, small-headed, Nose: Mildly platyrrhine, Chin: Weak",
+    "region": "Europe",
+    "url": "pages/phenotypes/SouthAndamanid.html"
+  },
+  {
+    "name": "South Australid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Australid subtype with proto-Caucasiform features associated with the people of the Murray basin of Southeastern Australia. Originally the most numerous Australid type, European settlers colonised the...",
+    "traits": "Skin: Medium to dark reddish-brown, Hair: Wavy to tight-curly, brown or black, Height: Medium, Build: Brachyskelic, mesomorph, Skull: Dolichocephalic, sometimes mesocephalic, Head Shape: Chamae- orthocranic, large-headed, Nose: Platyrrhine but relatively high and long",
+    "region": "Europe",
+    "url": "pages/phenotypes/SouthAustralid.html"
+  },
+  {
+    "name": "South Bantuid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Bantuid variety, characterised by relatively wide skulls and robust faces. Especially found in the Kwazulu Natal / Transkei regions of South Africa and Swaziland, extends through many regions of South...",
+    "traits": "Skin: Dark, sometimes medium brown, Hair: Usually kinky, sometimes peppercorn, Height: Rather tall, Build: Mildly brachyskelic, endo- mesomorph, Skull: Dolicho- mesocephalic, Head Shape: Orthocranic, sometimes chamaecranic, Face: Slightly narrower and more robust than other Bantuids",
+    "region": "Africa",
+    "url": "pages/phenotypes/SouthBantuid.html"
+  },
+  {
+    "name": "South Ethiopid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "The southernmost Ethiopid, common between Lake Victoria and Lake Tanganyika, especially in Rwanda, Burundi, but also Uganda, Tanzania, and Eastern DR Congo. In its purest form in Tutsi. Also common in...",
+    "traits": "Skin: Dark brown, sometimes medium brown, Hair: Tight-curly or kinky, Height: Very tall, almost reaching Dinkaid standards, Build: Ectomorph, hyperbrachyskelic, Skull: Dolichocephalic, Head Shape: Orthocranic, Nose: Mildly leptorrhine or mesorrhine, sometimes convex",
+    "region": "Africa",
+    "url": "pages/phenotypes/SouthEthiopid.html"
+  },
+  {
+    "name": "South Gondid",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "Gracile Gondid variety of Central India that shares many similarities with Gondids proper, except for a variety of features that puts them morphologically closer to Gracile Indids, possibly a result o...",
+    "traits": "Skin: Medium to dark brown, Hair: Wavy, sometimes curly, Height: Short, Build: Brachyskelic, ectomorph, Skull: Mesocephalic, Head Shape: Mildly hypsicranic, small-headed, Nose: Mesorrhine",
+    "region": "Asia",
+    "url": "pages/phenotypes/SouthGondid.html"
+  },
+  {
+    "name": "South Nilotid",
+    "type": "local",
+    "group": "Nilotid",
+    "description": "Type common to the southern branch of Nilotic people of Lake Albert south to Lake Victoria, in South Sudan, Uganda, and Western Kenya. In some features, less typical than Dinkaids and Shillukids, stat...",
+    "traits": "Height: (Rather) tall, Build: Mostly endomorph, Skull: Dolicho-mesocephalic, Skull height: Mildly hypsicranic, Legs: (Hyper)brachyskelic, Nose: Mesorrhine/mildly platyrrhine, Skin: Black",
+    "region": "Africa",
+    "url": "pages/phenotypes/SouthNilotid.html"
+  },
+  {
+    "name": "Strandlooper",
+    "type": "local",
+    "group": "Khoid",
+    "description": "Almost extinct Khoisanid type, once common along the South African coasts from Cape Colony to the Skeleton Coast. The name derives from the \"beach-combers\" who lived mainly on shellfish. Probably a Pr...",
+    "traits": "Height: Short, Build: Ectomorph/sometimes endomorph, Skull: Mesocephalic/sometimes brachycephalic, Skull size: Large, Skull height: Chamaecranic, Nose: Mesorrhine, Skin: Yellowish brown",
+    "region": "Africa",
+    "url": "pages/phenotypes/Strandlooper.html"
+  },
+  {
+    "name": "Sudanid",
+    "type": "basic",
+    "group": "Sub-Saharan African",
+    "description": "Widespread type, native to the savannah regions of North-Equatorial Africa. Skull long and high, nose very wide and rather low-rooted, lips bulging, chin small, forehead steep, face large, hair kinky,...",
+    "traits": "Skull: Long and high, Nose: Very wide, low-rooted, Lips: Bulging, Chin: Small, Forehead: Steep, Face: Large, Hair: Kinky",
+    "region": "Africa",
+    "url": "pages/phenotypes/Sudanid.html"
+  },
+  {
+    "name": "Tapirid",
+    "type": "local",
+    "group": "Melanesid",
+    "description": "Pygmy Melanesian type. In difference to many other Pygmies, it shares a common history with its taller neighbours and probably represents a secondary adaption driven by iodine deficiency. Typified by ...",
+    "traits": "Group:Melanesid, Skin: Dark to medium brown, yellowish-reddish, Hair: Tight-curly or kinky brown-black, sometimes red or blonde, Height: Very short (Kimyal even shorter than Bambutids), Legs: Mesoskelic, Build: Mesomorph to ectomorph, Skull: Small-headed, meso- brachycephalic, orthocranic",
+    "region": "Oceania",
+    "url": "pages/phenotypes/Tapirid.html"
+  },
+  {
+    "name": "Trans Mediterranid",
+    "type": "local",
+    "group": "Mediterranid",
+    "description": "Widespread Mediterranid subtype with many morphological features intermediate between Eurafricanid and Gracile Mediterranid. Possibly a gracilised Eurafricanid that spread west through ancient migrati...",
+    "traits": "Height: Medium, Build: Ectomorph, Skull: Dolicho-mesocephalic, Face: Oval, often long, Nose: (Hyper-)leptorrhine, high-bridged, Skin: Light to medium yellowish brown, Hair color: Brown to black",
+    "region": "Africa",
+    "url": "pages/phenotypes/TransMediterranid.html"
+  },
+  {
+    "name": "Trønder",
+    "type": "local",
+    "group": "Anthropological Types",
+    "description": "North European type, combines features of Paleo Atlantid, Hallstatt, and East Nordid. One of the main elements in the ancient Vikings. Their nucleus lies in the Norwegian Trøndelag region. It also dom...",
+    "traits": "Skin: Rosy-white, Hair: Straight or wavy, Hair Color: Often golden blonde, sometimes red or brown, Eyes: Light, Height: Tall, Build: Ecto- to mesomorph",
+    "region": "Europe",
+    "url": "pages/phenotypes/Tronder.html"
+  },
+  {
+    "name": "West Alpinid",
+    "type": "local",
+    "group": "Alpinid",
+    "description": "Alpinid proper, historically found in the mountain regions of Western Europe. Often a cohabitant of a second mountain type, the Dinarid. The nucleus of Alpinids lies in the Western Alps and Central Fr...",
+    "traits": "Height: Short to medium, Build: Endomorph, Skull: (Hyper-)brachycephalic, Face: Wide and round, Nose: Leptorrhine, short, small, Skin: Fair to light brown, Hair color: Light brown, blonde minority",
+    "region": "Europe",
+    "url": "pages/phenotypes/WestAlpinid.html"
+  },
+  {
+    "name": "Xhosaid",
+    "type": "local",
+    "group": "Bantuid",
+    "description": "Bantuid-Khoisan contact type that developed as a result of the Bantu expansion some millennia ago when Bantu assimilated older Khoisan groups. Found especially in the eastern parts of South Africa. Co...",
+    "traits": "Height: Medium, Build: Variable, Skull: Dolichocephalic, Skull height: Chamae-orthocranic, Skull vault: Lower than all Bantuid types, Legs: Meso-brachyskelic, Nose: (Strongly) platyrrhine",
+    "region": "Africa",
+    "url": "pages/phenotypes/Xhosaid.html"
+  }
+]

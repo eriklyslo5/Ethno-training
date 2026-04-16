@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EthnoGuessr Unlimited</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #c9a84c;
+      --gold-light: #e0bc65;
+      --bg: #0d0f16;
+      --bg2: #13161f;
+      --bg3: #1a1d2a;
+      --border: #252840;
+      --text: #e0e0e0;
+      --muted: #777;
+      --red: #e05555;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      z-index: 10;
+    }
+
+    .brand { display: flex; flex-direction: column; }
+    .brand-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--gold);
+    }
+    .brand-sub {
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.4px;
+    }
+
+    .stats { display: flex; gap: 20px; }
+    .stat { text-align: center; }
+    .stat-val {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-lbl {
+      font-size: 0.65rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-top: 2px;
+    }
+
+    /* ── MAIN LAYOUT ── */
+    .game-area {
+      display: flex;
+      flex: 1;
+      min-height: 0;
+    }
+
+    /* ── LEFT PANEL ── */
+    .left-panel {
+      width: 300px;
+      min-width: 260px;
+      background: var(--bg2);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .panel-top-bar {
+      padding: 9px 14px;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+
+    .images-area {
+      display: flex;
+      flex: 1;
+      min-height: 0;
+      position: relative;
+      background: #090b10;
+    }
+
+    .img-slot {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: stretch;
+    }
+
+    .img-slot + .img-slot {
+      border-left: 1px solid var(--border);
+    }
+
+    .img-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .img-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #2a2d3a;
+      gap: 8px;
+    }
+
+    .img-placeholder svg { opacity: 0.4; }
+    .img-placeholder span { font-size: 0.7rem; color: #333; }
+
+    .img-gender-tag {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.65);
+      backdrop-filter: blur(4px);
+      color: #aaa;
+      font-size: 0.65rem;
+      padding: 2px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      pointer-events: none;
+    }
+
+    /* ── PANEL BOTTOM ── */
+    .panel-bottom {
+      flex-shrink: 0;
+      border-top: 1px solid var(--border);
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: var(--bg2);
+    }
+
+    /* Round result */
+    .round-result {
+      display: none;
+      text-align: center;
+    }
+    .round-result.show { display: block; }
+
+    .result-pts {
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1;
+      transition: color 0.4s;
+    }
+    .result-pts-lbl { font-size: 0.72rem; color: var(--muted); margin-top: 1px; }
+    .result-dist {
+      font-size: 0.82rem;
+      color: #aaa;
+      margin-top: 6px;
+    }
+
+    /* Reveal info */
+    .reveal-box {
+      display: none;
+    }
+    .reveal-box.show { display: block; }
+
+    .reveal-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .reveal-region {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 1px;
+      margin-bottom: 6px;
+    }
+    .reveal-desc {
+      font-size: 0.75rem;
+      color: #999;
+      line-height: 1.55;
+    }
+
+    /* Buttons */
+    .btn {
+      width: 100%;
+      padding: 11px 14px;
+      border: none;
+      border-radius: 7px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, transform 0.1s;
+      letter-spacing: 0.3px;
+    }
+    .btn:active { transform: scale(0.98); }
+
+    .btn-confirm {
+      background: var(--gold);
+      color: #0d0f16;
+    }
+    .btn-confirm:hover:not(:disabled) { background: var(--gold-light); }
+    .btn-confirm:disabled {
+      background: #2a2820;
+      color: #4a4530;
+      cursor: default;
+    }
+
+    .btn-next {
+      background: var(--bg3);
+      color: var(--text);
+      border: 1px solid var(--border);
+      display: none;
+    }
+    .btn-next.show { display: block; }
+    .btn-next:hover { background: #1f2235; border-color: #3a3d5a; }
+
+    /* ── MAP ── */
+    .map-wrap {
+      flex: 1;
+      position: relative;
+      min-width: 0;
+    }
+
+    #map {
+      width: 100%;
+      height: 100%;
+      cursor: crosshair;
+    }
+
+    .map-hint {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(13, 15, 22, 0.82);
+      backdrop-filter: blur(6px);
+      color: #aaa;
+      font-size: 0.78rem;
+      padding: 7px 18px;
+      border-radius: 20px;
+      pointer-events: none;
+      z-index: 800;
+      border: 1px solid var(--border);
+      transition: opacity 0.4s;
+      white-space: nowrap;
+    }
+    .map-hint.fade { opacity: 0; }
+
+    /* Leaflet popup styling */
+    .leaflet-popup-content-wrapper {
+      background: var(--bg3) !important;
+      color: var(--text) !important;
+      border: 1px solid var(--border) !important;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6) !important;
+      border-radius: 8px !important;
+    }
+    .leaflet-popup-tip { background: var(--bg3) !important; }
+    .leaflet-popup-content { font-size: 0.82rem; }
+    .popup-name { font-weight: 700; color: var(--gold); margin-bottom: 2px; }
+    .popup-region { color: var(--muted); font-size: 0.75rem; }
+
+    /* Leaflet attribution */
+    .leaflet-control-attribution {
+      background: rgba(13,15,22,0.75) !important;
+      color: #555 !important;
+      font-size: 0.6rem !important;
+    }
+    .leaflet-control-attribution a { color: #666 !important; }
+
+    /* Score bar at top of map (appears after guess) */
+    .score-bar {
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 800;
+      background: rgba(13, 15, 22, 0.88);
+      backdrop-filter: blur(6px);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 8px 22px;
+      display: none;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.82rem;
+    }
+    .score-bar.show { display: flex; }
+    .score-bar-item { text-align: center; }
+    .score-bar-val { font-weight: 700; font-size: 1.1rem; }
+    .score-bar-lbl { font-size: 0.63rem; color: var(--muted); text-transform: uppercase; }
+    .score-bar-sep { width: 1px; height: 28px; background: var(--border); }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .left-panel { width: 100%; min-width: 0; height: 45vh; border-right: none; border-bottom: 1px solid var(--border); }
+      .game-area { flex-direction: column; }
+      .left-panel { flex-shrink: 0; }
+      .map-wrap { flex: 1; }
+      .stats { gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="brand">
+    <div class="brand-name">ETHNOGUESSR</div>
+    <div class="brand-sub">Unlimited · humanphenotypes.net</div>
+  </div>
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-val" id="stat-round">1</div>
+      <div class="stat-lbl">Round</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val" id="stat-total">0</div>
+      <div class="stat-lbl">Total</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val" id="stat-avg">—</div>
+      <div class="stat-lbl">Avg/Round</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val" id="stat-best">—</div>
+      <div class="stat-lbl">Best</div>
+    </div>
+  </div>
+</header>
+
+<!-- GAME AREA -->
+<div class="game-area">
+
+  <!-- LEFT: images + controls -->
+  <div class="left-panel">
+    <div class="panel-top-bar" id="panel-label">Round 1 — Where is this phenotype from?</div>
+
+    <div class="images-area">
+      <div class="img-slot">
+        <img id="img-m" alt="Male composite">
+        <div class="img-gender-tag">Male</div>
+      </div>
+      <div class="img-slot">
+        <img id="img-f" alt="Female composite">
+        <div class="img-gender-tag">Female</div>
+      </div>
+    </div>
+
+    <div class="panel-bottom">
+
+      <!-- After guess: score + reveal -->
+      <div class="round-result" id="round-result">
+        <div class="result-pts" id="result-pts">0</div>
+        <div class="result-pts-lbl">points this round</div>
+        <div class="result-dist" id="result-dist"></div>
+      </div>
+
+      <div class="reveal-box" id="reveal-box">
+        <div class="reveal-name" id="rev-name"></div>
+        <div class="reveal-region" id="rev-region"></div>
+        <div class="reveal-desc" id="rev-desc"></div>
+      </div>
+
+      <!-- Buttons -->
+      <button class="btn btn-confirm" id="btn-confirm" disabled>
+        Click on the map to place your guess
+      </button>
+      <button class="btn btn-next" id="btn-next">
+        Next Round →
+      </button>
+    </div>
+  </div>
+
+  <!-- RIGHT: Map -->
+  <div class="map-wrap">
+    <div id="map"></div>
+    <div class="map-hint" id="map-hint">Click anywhere to place your guess</div>
+
+    <!-- Score summary bar (shown after guess) -->
+    <div class="score-bar" id="score-bar">
+      <div class="score-bar-item">
+        <div class="score-bar-val" id="sb-pts" style="color: var(--gold)">0</div>
+        <div class="score-bar-lbl">Points</div>
+      </div>
+      <div class="score-bar-sep"></div>
+      <div class="score-bar-item">
+        <div class="score-bar-val" id="sb-dist">—</div>
+        <div class="score-bar-lbl">Distance</div>
+      </div>
+      <div class="score-bar-sep"></div>
+      <div class="score-bar-item">
+        <div class="score-bar-val" id="sb-total" style="color: var(--gold)">0</div>
+        <div class="score-bar-lbl">Total</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="phenotypes.js"></script>
+<script>
+'use strict';
+
+// PHENOTYPES loaded from phenotypes.js (207 entries)
+
+// ═══════════════════════════════════════════════════════════════
+// GAME STATE
+// ═══════════════════════════════════════════════════════════════
+const G = {
+  round: 1,
+  totalScore: 0,
+  roundsPlayed: 0,
+  bestScore: -1,
+  currentPhenotype: null,
+  guessMarker: null,
+  actualMarker: null,
+  guessLine: null,
+  guessLatLng: null,
+  guessed: false,
+  usedSet: new Set()
+};
+
+// ═══════════════════════════════════════════════════════════════
+// LEAFLET MAP
+// ═══════════════════════════════════════════════════════════════
+const map = L.map('map', {
+  center: [20, 10],
+  zoom: 2,
+  minZoom: 1,
+  maxZoom: 10,
+  zoomControl: true,
+  worldCopyJump: true,
+  attributionControl: true
+});
+
+// Dark CartoDB tile layer
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
+  subdomains: 'abcd',
+  maxZoom: 20,
+  noWrap: false
+}).addTo(map);
+
+// Custom marker icons
+const mkIcon = (color, size = 16) => L.divIcon({
+  className: '',
+  html: `<div style="
+    width:${size}px;height:${size}px;
+    background:${color};
+    border:2.5px solid rgba(255,255,255,0.9);
+    border-radius:50%;
+    box-shadow:0 2px 8px rgba(0,0,0,0.6);
+  "></div>`,
+  iconSize: [size, size],
+  iconAnchor: [size/2, size/2]
+});
+
+const ICON_GUESS  = mkIcon('#c9a84c', 18);
+const ICON_ACTUAL = mkIcon('#e05555', 18);
+
+// Map click
+map.on('click', e => {
+  if (G.guessed) return;
+  G.guessLatLng = e.latlng;
+  if (G.guessMarker) {
+    G.guessMarker.setLatLng(e.latlng);
+  } else {
+    G.guessMarker = L.marker(e.latlng, { icon: ICON_GUESS }).addTo(map);
+  }
+  const btn = document.getElementById('btn-confirm');
+  btn.disabled = false;
+  btn.textContent = 'Confirm Guess';
+  document.getElementById('map-hint').classList.add('fade');
+});
+
+// ═══════════════════════════════════════════════════════════════
+// SCORING
+// ═══════════════════════════════════════════════════════════════
+function haversine(lat1, lng1, lat2, lng2) {
+  const R = 6371;
+  const toR = x => x * Math.PI / 180;
+  const dLat = toR(lat2 - lat1), dLng = toR(lng2 - lng1);
+  const a = Math.sin(dLat/2)**2 +
+    Math.cos(toR(lat1)) * Math.cos(toR(lat2)) * Math.sin(dLng/2)**2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+}
+
+function calcScore(km) {
+  if (km < 50) return 5000;
+  return Math.max(0, Math.round(5000 * Math.exp(-km / 2000)));
+}
+
+function fmtDist(km) {
+  if (km < 1) return `${Math.round(km * 1000)} m`;
+  if (km < 1000) return `${Math.round(km).toLocaleString()} km`;
+  return `${(km / 1000).toFixed(1)}k km`;
+}
+
+function scoreColor(pts) {
+  // 0 = red, 2500 = orange, 5000 = gold-green
+  const t = pts / 5000;
+  if (t > 0.8) return '#4cba6e';   // green-ish
+  if (t > 0.5) return '#c9a84c';   // gold
+  if (t > 0.25) return '#d4732a';  // orange
+  return '#e05555';                 // red
+}
+
+// ═══════════════════════════════════════════════════════════════
+// GAME LOGIC
+// ═══════════════════════════════════════════════════════════════
+function pickPhenotype() {
+  if (G.usedSet.size >= PHENOTYPES.length) G.usedSet.clear();
+  let idx;
+  do { idx = Math.floor(Math.random() * PHENOTYPES.length); }
+  while (G.usedSet.has(idx));
+  G.usedSet.add(idx);
+  return PHENOTYPES[idx];
+}
+
+function startRound() {
+  // Clean up map layers
+  [G.guessMarker, G.actualMarker, G.guessLine].forEach(l => l && map.removeLayer(l));
+  G.guessMarker = G.actualMarker = G.guessLine = null;
+  G.guessLatLng = null;
+  G.guessed = false;
+  G.currentPhenotype = pickPhenotype();
+
+  const p = G.currentPhenotype;
+
+  // Images loaded directly from humanphenotypes.org
+  const lid = p.id.toLowerCase();
+  resetImgSlots();
+  const imgM = document.getElementById('img-m');
+  const imgF = document.getElementById('img-f');
+  imgM.onerror = function() { showImgFallback(this, 'Male'); };
+  imgF.onerror = function() { showImgFallback(this, 'Female'); };
+  imgM.src = 'https://humanphenotypes.org/images/' + lid + 'm.jpg';
+  imgF.src = 'https://humanphenotypes.org/images/' + lid + 'f.jpg';
+
+  // Labels
+  document.getElementById('panel-label').textContent =
+    `Round ${G.round} — Where is this phenotype from?`;
+  document.getElementById('stat-round').textContent = G.round;
+
+  // Reset UI
+  document.getElementById('round-result').classList.remove('show');
+  document.getElementById('reveal-box').classList.remove('show');
+  document.getElementById('score-bar').classList.remove('show');
+  document.getElementById('btn-next').classList.remove('show');
+  document.getElementById('map-hint').classList.remove('fade');
+  document.getElementById('map-hint').textContent = 'Click anywhere to place your guess';
+
+  const btn = document.getElementById('btn-confirm');
+  btn.disabled = true;
+  btn.textContent = 'Click on the map to place your guess';
+  btn.style.display = '';
+
+  // Reset map
+  map.setView([20, 10], 2);
+}
+
+function confirmGuess() {
+  if (!G.guessLatLng || G.guessed) return;
+  G.guessed = true;
+
+  const p = G.currentPhenotype;
+  const actualLL = L.latLng(p.lat, p.lng);
+  const dist = haversine(G.guessLatLng.lat, G.guessLatLng.lng, p.lat, p.lng);
+  const pts  = calcScore(dist);
+  const col  = scoreColor(pts);
+
+  G.totalScore   += pts;
+  G.roundsPlayed++;
+  if (pts > G.bestScore) G.bestScore = pts;
+
+  // Place actual marker
+  G.actualMarker = L.marker(actualLL, { icon: ICON_ACTUAL }).addTo(map);
+  G.actualMarker.bindPopup(
+    `<div class="popup-name">${p.name}</div><div class="popup-region">${p.group || ''}</div>`
+  ).openPopup();
+
+  // Line between guess and actual
+  G.guessLine = L.polyline([G.guessLatLng, actualLL], {
+    color: '#c9a84c', weight: 2, dashArray: '6 5', opacity: 0.65
+  }).addTo(map);
+
+  // Zoom to fit both
+  map.fitBounds(L.latLngBounds([G.guessLatLng, actualLL]), { padding: [60, 80], maxZoom: 6 });
+
+  // Update header stats
+  document.getElementById('stat-total').textContent = G.totalScore.toLocaleString();
+  document.getElementById('stat-avg').textContent =
+    Math.round(G.totalScore / G.roundsPlayed).toLocaleString();
+  document.getElementById('stat-best').textContent = G.bestScore.toLocaleString();
+
+  // Left panel result
+  const rPts = document.getElementById('result-pts');
+  rPts.textContent = pts.toLocaleString();
+  rPts.style.color = col;
+  document.getElementById('result-dist').textContent = `${fmtDist(dist)} from the actual location`;
+  document.getElementById('round-result').classList.add('show');
+
+  // Reveal phenotype
+  document.getElementById('rev-name').textContent = p.name;
+  document.getElementById('rev-region').textContent = p.group ? 'Group: ' + p.group : '';
+  document.getElementById('rev-desc').textContent = p.desc;
+  document.getElementById('reveal-box').classList.add('show');
+
+  // Score bar on map
+  document.getElementById('sb-pts').textContent = pts.toLocaleString();
+  document.getElementById('sb-pts').style.color = col;
+  document.getElementById('sb-dist').textContent = fmtDist(dist);
+  document.getElementById('sb-total').textContent = G.totalScore.toLocaleString();
+  document.getElementById('score-bar').classList.add('show');
+
+  // Swap buttons
+  document.getElementById('btn-confirm').style.display = 'none';
+  document.getElementById('btn-next').classList.add('show');
+  document.getElementById('map-hint').classList.add('fade');
+}
+
+// ═══════════════════════════════════════════════════════════════
+// IMAGE FALLBACK
+// ═══════════════════════════════════════════════════════════════
+function resetImgSlots() {
+  // Remove any fallback placeholders and restore img elements
+  document.querySelectorAll('.img-placeholder').forEach(ph => ph.remove());
+  document.getElementById('img-m').style.display = '';
+  document.getElementById('img-f').style.display = '';
+}
+
+function showImgFallback(imgEl, label) {
+  const slot = imgEl.parentElement;
+  imgEl.style.display = 'none';
+  // Avoid duplicate placeholders
+  if (slot.querySelector('.img-placeholder')) return;
+  const ph = document.createElement('div');
+  ph.className = 'img-placeholder';
+  ph.innerHTML = `
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+    </svg>
+    <span>${label}</span>`;
+  slot.insertBefore(ph, imgEl);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// EVENT LISTENERS
+// ═══════════════════════════════════════════════════════════════
+document.getElementById('btn-confirm').addEventListener('click', confirmGuess);
+
+document.getElementById('btn-next').addEventListener('click', () => {
+  G.round++;
+  startRound();
+});
+
+// ═══════════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════════
+// Fix Leaflet size in flex container
+window.addEventListener('load', () => map.invalidateSize());
+startRound();
+</script>
+</body>
+</html>
