@@ -562,15 +562,15 @@ function startRound() {
 
   const p = G.currentPhenotype;
 
-  // Images loaded directly from humanphenotypes.org
+  // Images served locally (pre-downloaded or proxied via server.js)
   const lid = p.id.toLowerCase();
   resetImgSlots();
   const imgM = document.getElementById('img-m');
   const imgF = document.getElementById('img-f');
   imgM.onerror = function() { showImgFallback(this, 'Male'); };
   imgF.onerror = function() { showImgFallback(this, 'Female'); };
-  imgM.src = 'https://humanphenotypes.org/images/' + lid + 'm.jpg';
-  imgF.src = 'https://humanphenotypes.org/images/' + lid + 'f.jpg';
+  imgM.src = '/images/' + lid + 'm.jpg';
+  imgF.src = '/images/' + lid + 'f.jpg';
 
   // Labels
   document.getElementById('panel-label').textContent =

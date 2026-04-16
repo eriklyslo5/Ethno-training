@@ -40,18 +40,15 @@ function fetchRemoteImage(filename, res) {
     }
   }
 
-  // Fetch from humanphenotypes.org
-  const url = `https://humanphenotypes.org/images/${filename}`;
+  // Fetch from humanphenotypes.net (no Cloudflare, plain HTTP)
+  const url = `http://humanphenotypes.net/${filename}`;
   const options = {
     headers: {
       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-      'Accept': 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
-      'Referer': 'https://humanphenotypes.org/',
-      'Accept-Language': 'en-US,en;q=0.9',
     }
   };
 
-  https.get(url, options, (imgRes) => {
+  http.get(url, options, (imgRes) => {
     if (imgRes.statusCode !== 200) {
       res.writeHead(404);
       res.end('Image not found');
