@@ -433,6 +433,7 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="phenotypes.js"></script>
+<script src="polygons.js"></script>
 <script>
 'use strict';
 
@@ -452,7 +453,10 @@ const G = {
   guessLine: null,
   guessLatLng: null,
   guessed: false,
-  usedSet: new Set()
+  usedSet: new Set(),
+  // Polygon layers for current round (cleared at startRound)
+  polygonLayers: [],   // all (bright + dull) drawn Leaflet layers
+  brightLayers: []     // subset: bright polygons/circles for scoring
 };
 
 // ═══════════════════════════════════════════════════════════════
@@ -521,8 +525,91 @@ function haversine(lat1, lng1, lat2, lng2) {
 }
 
 function calcScore(km) {
-  if (km < 50) return 5000;
-  return Math.max(0, Math.round(5000 * Math.exp(-km / 2000)));
+  // hbd.gg classic formula: full score at ≤200 km, zero at ≥5000 km, log falloff
+  const minDist = 200, maxDist = 5000;
+  if (km <= minDist) return 5000;
+  if (km >= maxDist) return 0;
+  return Math.round(5000 * (1 - Math.log(km / minDist) / Math.log(maxDist / minDist)));
+}
+
+// ── Polygon helpers (ported from hbd.gg classic_polygon_logic.js) ──
+function pointInRing(lat, lng, ring) {
+  let inside = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const xi = ring[i].lat, yi = ring[i].lng;
+    const xj = ring[j].lat, yj = ring[j].lng;
+    const intersect = ((yi > lng) !== (yj > lng)) &&
+      (lat < (xj - xi) * (lng - yi) / (yj - yi) + xi);
+    if (intersect) inside = !inside;
+  }
+  return inside;
+}
+
+function isPointInsideBright(point, brightData) {
+  // brightData is polygonData["bright"]: [[[ring...]]]
+  for (const poly of brightData) {
+    for (const ring of poly) {
+      if (ring.length > 3 && pointInRing(point.lat, point.lng, ring)) return true;
+    }
+  }
+  return false;
+}
+
+function nearestPointOnBright(point, brightData) {
+  let nearest = null, minDist = Infinity;
+  const pLL = L.latLng(point.lat, point.lng);
+  for (const poly of brightData) {
+    for (const ring of poly) {
+      for (const pt of ring) {
+        const d = pLL.distanceTo([pt.lat, pt.lng]);
+        if (d < minDist) { minDist = d; nearest = pt; }
+      }
+    }
+  }
+  return { nearest, distanceKm: minDist / 1000 };
+}
+
+function drawPolygons(polygonData, guessLng) {
+  // Draws bright (high opacity) + dull (low opacity). Returns nothing;
+  // stores layers in G.polygonLayers / G.brightLayers for cleanup + scoring.
+  function drawSet(setData, isBright) {
+    const fillOpacity = isBright ? 0.45 : 0.18;
+    const color = '#e05555';
+    for (const poly of setData) {
+      for (const ring of poly) {
+        if (ring.length <= 3) {
+          // Tiny: represent as 50 km circle at first point
+          const pt = ring[0];
+          const avgLng = pt.lng;
+          const offset = Math.round((guessLng - avgLng) / 360) * 360;
+          const circle = L.circle([pt.lat, pt.lng + offset], {
+            radius: 50000, color, opacity: 0.4, weight: 2,
+            fillColor: color, fillOpacity
+          }).addTo(map);
+          G.polygonLayers.push(circle);
+          if (isBright) G.brightLayers.push(circle);
+        } else {
+          const avgLng = ring.reduce((s, c) => s + c.lng, 0) / ring.length;
+          const offset = Math.round((guessLng - avgLng) / 360) * 360;
+          const coords = ring.map(c => [c.lat, c.lng + offset]);
+          const leafletPoly = L.polygon(coords, {
+            color, opacity: 0.5, weight: 1.5,
+            fillColor: color, fillOpacity
+          }).addTo(map);
+          G.polygonLayers.push(leafletPoly);
+          if (isBright) G.brightLayers.push(leafletPoly);
+        }
+      }
+    }
+  }
+  drawSet(polygonData.bright || [], true);
+  drawSet(polygonData.dull || [], false);
+}
+
+function clearPolygons() {
+  for (const layer of G.polygonLayers) map.removeLayer(layer);
+  G.polygonLayers = [];
+  G.brightLayers = [];
 }
 
 function fmtDist(km) {
@@ -558,6 +645,7 @@ function startRound() {
   G.guessMarker = G.actualMarker = G.guessLine = null;
   G.guessLatLng = null;
   G.guessed = false;
+  clearPolygons();
   G.currentPhenotype = pickPhenotype();
 
   const p = G.currentPhenotype;
@@ -599,28 +687,53 @@ function confirmGuess() {
   G.guessed = true;
 
   const p = G.currentPhenotype;
-  const actualLL = L.latLng(p.lat, p.lng);
-  const dist = haversine(G.guessLatLng.lat, G.guessLatLng.lng, p.lat, p.lng);
-  const pts  = calcScore(dist);
-  const col  = scoreColor(pts);
+  const key = (p.id || '').replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  const polyData = (typeof POLYGONS !== 'undefined') ? POLYGONS[key] : null;
+
+  // Draw polygons (bright = 100% zone, dull = extended)
+  if (polyData) drawPolygons(polyData, G.guessLatLng.lng);
+
+  // Scoring: inside bright → 5000; else distance to nearest polygon vertex
+  let dist = 0, nearestLL = null;
+  if (polyData && isPointInsideBright(G.guessLatLng, polyData.bright || [])) {
+    dist = 0;
+  } else if (polyData && (polyData.bright || []).length) {
+    const np = nearestPointOnBright(G.guessLatLng, polyData.bright);
+    dist = np.distanceKm;
+    nearestLL = np.nearest;
+  } else {
+    // Fallback: no polygon data → use centroid / phenotype lat-lng
+    const centroid = (polyData && polyData.centroid) ? polyData.centroid : { lat: p.lat, lng: p.lng };
+    dist = haversine(G.guessLatLng.lat, G.guessLatLng.lng, centroid.lat, centroid.lng);
+    nearestLL = centroid;
+  }
+  const pts = calcScore(dist);
+  const col = scoreColor(pts);
 
   G.totalScore   += pts;
   G.roundsPlayed++;
   if (pts > G.bestScore) G.bestScore = pts;
 
-  // Place actual marker
-  G.actualMarker = L.marker(actualLL, { icon: ICON_ACTUAL }).addTo(map);
-  G.actualMarker.bindPopup(
-    `<div class="popup-name">${p.name}</div><div class="popup-region">${p.group || ''}</div>`
-  ).openPopup();
+  // If guess was outside the zone, show the closest point marker + line
+  const actualLL = nearestLL ? L.latLng(nearestLL.lat, nearestLL.lng) : null;
+  if (actualLL && dist > 0) {
+    G.actualMarker = L.marker(actualLL, { icon: ICON_ACTUAL }).addTo(map);
+    G.actualMarker.bindPopup(
+      `<div class="popup-name">${p.name}</div><div class="popup-region">${p.group || ''}</div>`
+    ).openPopup();
+    G.guessLine = L.polyline([G.guessLatLng, actualLL], {
+      color: '#c9a84c', weight: 2, dashArray: '6 5', opacity: 0.65
+    }).addTo(map);
+  }
 
-  // Line between guess and actual
-  G.guessLine = L.polyline([G.guessLatLng, actualLL], {
-    color: '#c9a84c', weight: 2, dashArray: '6 5', opacity: 0.65
-  }).addTo(map);
-
-  // Zoom to fit both
-  map.fitBounds(L.latLngBounds([G.guessLatLng, actualLL]), { padding: [60, 80], maxZoom: 6 });
+  // Fit bounds to include guess, closest point, and all polygon layers
+  const bounds = L.latLngBounds([G.guessLatLng]);
+  if (actualLL) bounds.extend(actualLL);
+  for (const layer of G.polygonLayers) {
+    if (layer.getBounds) bounds.extend(layer.getBounds());
+    else if (layer.getLatLng) bounds.extend(layer.getLatLng());
+  }
+  map.fitBounds(bounds, { padding: [60, 80], maxZoom: 6 });
 
   // Update header stats
   document.getElementById('stat-total').textContent = G.totalScore.toLocaleString();
