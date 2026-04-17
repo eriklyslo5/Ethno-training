@@ -745,7 +745,26 @@ function confirmGuess() {
   const rPts = document.getElementById('result-pts');
   rPts.textContent = pts.toLocaleString();
   rPts.style.color = col;
-  document.getElementById('result-dist').textContent = `${fmtDist(dist)} from the actual location`;
+  if (pts === 5000) {
+    const bullseyeMsgs = [
+      "Bullseye! Straight into the heartland.",
+      "Pinpoint! The ancestors would be proud.",
+      "Dead center. Are you a geneticist?",
+      "Nailed it! Not a single gene out of place.",
+      "Spot on! You smelled them from a continent away.",
+      "Perfect! You've been stalking these people, haven't you?",
+      "Flawless. The phenotype bows before you.",
+      "Direct hit! The map weeps tears of joy.",
+      "Textbook. Somewhere a professor just smiled.",
+      "Uncanny. Did you grow up there?",
+      "Right in the gene pool!",
+      "Sniper shot. 5000 points, zero hesitation."
+    ];
+    const msg = bullseyeMsgs[Math.floor(Math.random() * bullseyeMsgs.length)];
+    document.getElementById('result-dist').textContent = msg;
+  } else {
+    document.getElementById('result-dist').textContent = `${fmtDist(dist)} from the actual location`;
+  }
   document.getElementById('round-result').classList.add('show');
 
   // Reveal phenotype
