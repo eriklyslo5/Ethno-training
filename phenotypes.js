@@ -21,15 +21,15 @@ const PHENOTYPES = [
     "group": "Nordid",
     "lat": 59,
     "lng": 24,
-    "desc": "East Nordid subvariety, common in coastal regions of Baltic countries. One of the last strongholds of East Nordids that are only a minority type in most of their distribution today. Played a role in the formation of Tavastid and Tr�nder. Purest in We"
+    "desc": "East Nordid subvariety, common in coastal regions of Baltic countries. One of the last strongholds of East Nordids that are only a minority type in most of their distribution today. Played a role in the formation of Tavastid and Trønder. Purest in We"
   },
   {
     "id": "Alfoeld",
-    "name": "Alf�ld",
+    "name": "Alföld",
     "group": "Turanid",
     "lat": 47,
     "lng": 20,
-    "desc": "Western Turanid subtype, named after the Alf�ld (Great Hungarian Plain). It developed when Huns and Magyars entered the area during the early Middle Ages and caused a blending of several regional types. Most common in Hungary, especially the Alf�ld p"
+    "desc": "Western Turanid subtype, named after the Alföld (Great Hungarian Plain). It developed when Huns and Magyars entered the area during the early Middle Ages and caused a blending of several regional types. Most common in Hungary, especially the Alföld p"
   },
   {
     "id": "AmurSakhalin",
@@ -61,7 +61,7 @@ const PHENOTYPES = [
     "group": "Nordid",
     "lat": 52.5,
     "lng": -1,
-    "desc": "North-West European type, similar to Tr�nder, but with a stronger Hallstatt component. Was typified by the ancient Germanic tribes of Angles, Saxons, and Jutes who conquered Britain from the 5th century on. Most common today in East England, but also"
+    "desc": "North-West European type, similar to Trønder, but with a stronger Hallstatt component. Was typified by the ancient Germanic tribes of Angles, Saxons, and Jutes who conquered Britain from the 5th century on. Most common today in East England, but also"
   },
   {
     "id": "Annamid",
@@ -157,7 +157,7 @@ const PHENOTYPES = [
     "group": "Alpinid, Dinarid , Mediterranid",
     "lat": 43,
     "lng": -1.5,
-    "desc": "Ancient European type associated with the Basques. Found in its purest form in the Pyr�n�es-Atlantiques region of Southwestern France, although many modern French Basques are West Alpinid. Also present in Northern Spain, where it is rather mixed with"
+    "desc": "Ancient European type associated with the Basques. Found in its purest form in the Pyrénées-Atlantiques region of Southwestern France, although many modern French Basques are West Alpinid. Also present in Northern Spain, where it is rather mixed with"
   },
   {
     "id": "Baykal",
@@ -213,7 +213,7 @@ const PHENOTYPES = [
     "group": "Lagid",
     "lat": -18,
     "lng": -42,
-    "desc": "Lagid subtype of the Mata Atl�ntica forests of Brazil, partially mixed with the Fuegid substratum (South Fuegids, Huarpids). Was the dominant type of the Botocudo (Aimor�) people that experienced a dramatic population decline after European colonisat"
+    "desc": "Lagid subtype of the Mata Atlântica forests of Brazil, partially mixed with the Fuegid substratum (South Fuegids, Huarpids). Was the dominant type of the Botocudo (Aimoré) people that experienced a dramatic population decline after European colonisat"
   },
   {
     "id": "BrachioMelanesid",
@@ -321,11 +321,11 @@ const PHENOTYPES = [
   },
   {
     "id": "ChocoMotilon",
-    "name": "Choc�-Motilon",
+    "name": "Chocó-Motilon",
     "group": "Amazonid, Lagid",
     "lat": 7,
     "lng": -77,
-    "desc": "Special type found in Colombia, Venezuela, as well as Panama. Contains Brasilid elements as well as relicts of one of the first migrations to South America that show similarities to Fuegids. Typical groups include Choc� (Embera, Wounaan), Motilon (Ba"
+    "desc": "Special type found in Colombia, Venezuela, as well as Panama. Contains Brasilid elements as well as relicts of one of the first migrations to South America that show similarities to Fuegids. Typical groups include Chocó (Embera, Wounaan), Motilon (Ba"
   },
   {
     "id": "ChopiTswana",
@@ -381,7 +381,7 @@ const PHENOTYPES = [
     "group": "Ethiopid",
     "lat": 12,
     "lng": 42,
-    "desc": "Specialised Ethiopid type living in the hottest region of the world: the Danakil depression of Eritrea and Northern Ethiopia, with an annual average temperature of more than 34�C. Most common in the Afar people and southern tribes of the Saho (e.g. H"
+    "desc": "Specialised Ethiopid type living in the hottest region of the world: the Danakil depression of Eritrea and Northern Ethiopia, with an annual average temperature of more than 34°C. Most common in the Afar people and southern tribes of the Saho (e.g. H"
   },
   {
     "id": "Dayakid",
@@ -581,7 +581,7 @@ const PHENOTYPES = [
     "group": "Congolid",
     "lat": 5.5,
     "lng": -3,
-    "desc": "West African type, the shorter-skulled counterpart of Guinesids. May constitute the transition to Congolesids. Common in forest regions of C�te d'Ivoire, Benin, Liberia, Ghana, Togo, Nigeria, and Western Cameroon. Sporadically in Senegal, the Upper V"
+    "desc": "West African type, the shorter-skulled counterpart of Guinesids. May constitute the transition to Congolesids. Common in forest regions of Côte d'Ivoire, Benin, Liberia, Ghana, Togo, Nigeria, and Western Cameroon. Sporadically in Senegal, the Upper V"
   },
   {
     "id": "Guinesid",
@@ -589,7 +589,7 @@ const PHENOTYPES = [
     "group": "Congolid",
     "lat": 7,
     "lng": -10,
-    "desc": "West African forest type native to the littoral of the Gulf of Guinea. Extends from Guinea all the way to Cameroon and sporadically even to Northwestern Angola. Typically found in Susu, Konyanke, Krou, Kuranko, Kissi, Guerz�, Kpelle, Yakoba, Temne, B"
+    "desc": "West African forest type native to the littoral of the Gulf of Guinea. Extends from Guinea all the way to Cameroon and sporadically even to Northwestern Angola. Typically found in Susu, Konyanke, Krou, Kuranko, Kissi, Guerzé, Kpelle, Yakoba, Temne, B"
   },
   {
     "id": "Hadza",
@@ -797,7 +797,7 @@ const PHENOTYPES = [
     "group": "Lagid",
     "lat": -20,
     "lng": -44,
-    "desc": "Lagid proper, named after fossil remains of Brazil. Associated with one of the first migration waves to South America. Skulls sometimes Melanesiform. More widespread in prehistoric times. Still common in J� speakers like Xavante, Xerente, Krah�, Kaya"
+    "desc": "Lagid proper, named after fossil remains of Brazil. Associated with one of the first migration waves to South America. Skulls sometimes Melanesiform. More widespread in prehistoric times. Still common in Jê speakers like Xavante, Xerente, Krahô, Kaya"
   },
   {
     "id": "Libyid",
@@ -869,7 +869,7 @@ const PHENOTYPES = [
     "group": "Margid",
     "lat": 20,
     "lng": -100,
-    "desc": "Margid proper. Probably arrived with one of the earlier migrations to America. Typified by Otomi, Pur�pecha, Pame, Pima of Mexico, as well West Mono and Pomo of California. More mixed in Maidu, Aztecs, Maya, Yuma, Shoshone, and many others over a lar"
+    "desc": "Margid proper. Probably arrived with one of the earlier migrations to America. Typified by Otomi, Purépecha, Pame, Pima of Mexico, as well West Mono and Pomo of California. More mixed in Maidu, Aztecs, Maya, Yuma, Shoshone, and many others over a lar"
   },
   {
     "id": "Micronesid",
@@ -989,7 +989,7 @@ const PHENOTYPES = [
     "group": "Amazonid",
     "lat": 0,
     "lng": -65,
-    "desc": "Amazonid proper, the dominant type of the rainforests North of the Amazon River to the Caribbean. Common among Cariban speakers, e.g. Caribs, Makushi, Pem�n, Taurepang, Wayana, Yabarana, among others. The fearsome Caribs made the Spanish create the w"
+    "desc": "Amazonid proper, the dominant type of the rainforests North of the Amazon River to the Caribbean. Common among Cariban speakers, e.g. Caribs, Makushi, Pemón, Taurepang, Wayana, Yabarana, among others. The fearsome Caribs made the Spanish create the w"
   },
   {
     "id": "NorthAndamanid",
@@ -1005,7 +1005,7 @@ const PHENOTYPES = [
     "group": "Andid",
     "lat": 5,
     "lng": -75,
-    "desc": "The most important and numerous Andid subvariety, adapted to the high altitudes of the Peruvian and Ecuadorian Andes. Typified by Quechua. The dominant element in the ancient Inca Empire � the largest in pre-Columbian America. Still the most numerous"
+    "desc": "The most important and numerous Andid subvariety, adapted to the high altitudes of the Peruvian and Ecuadorian Andes. Typified by Quechua. The dominant element in the ancient Inca Empire — the largest in pre-Columbian America. Still the most numerous"
   },
   {
     "id": "NorthAtlantid",
@@ -1125,7 +1125,7 @@ const PHENOTYPES = [
     "group": "Patagonid",
     "lat": -36,
     "lng": -62,
-    "desc": "Slightly gracilised Patagonid variety, native to the vast plains of the Argentinian Chaco and Pampa. Sometimes mixed with Amazonid elements. Typical groups include the Chorote, Chan�, Mataco, Kadiweu, Pilag�, Toba, Wich�, Mocov�, Abip�n, and the exti"
+    "desc": "Slightly gracilised Patagonid variety, native to the vast plains of the Argentinian Chaco and Pampa. Sometimes mixed with Amazonid elements. Typical groups include the Chorote, Chané, Mataco, Kadiweu, Pilagá, Toba, Wichí, Mocoví, Abipón, and the exti"
   },
   {
     "id": "Patagonid",
@@ -1349,7 +1349,7 @@ const PHENOTYPES = [
     "group": "Amazonid",
     "lat": -10,
     "lng": -55,
-    "desc": "The most dynamic Amazonid variety, emerged in northern savannahs and spread south across Brazil to Paraguay and Argentina, pushing back older Lagids. Common among Tupian speakers, e.g. Apika, Aw�-Guaj�, Guarani, Kawahib, Chiriguano, Piripkura, etc., "
+    "desc": "The most dynamic Amazonid variety, emerged in northern savannahs and spread south across Brazil to Paraguay and Argentina, pushing back older Lagids. Common among Tupian speakers, e.g. Apika, Awá-Guajá, Guarani, Kawahib, Chiriguano, Piripkura, etc., "
   },
   {
     "id": "SouthAndamanid",
@@ -1525,7 +1525,7 @@ const PHENOTYPES = [
     "group": "Sinid",
     "lat": 21,
     "lng": 106,
-    "desc": "South Sinid subvariety, typical for the plains of the Red River in Northern Vietnam. Named after the old Tonkin protectorate / ��ng Kinh region. Developed through continuous Sinid expansions to the South and assimilation of indigenous Shanid elements"
+    "desc": "South Sinid subvariety, typical for the plains of the Red River in Northern Vietnam. Named after the old Tonkin protectorate / Đông Kinh region. Developed through continuous Sinid expansions to the South and assimilation of indigenous Shanid elements"
   },
   {
     "id": "TransMediterranid",
@@ -1545,11 +1545,11 @@ const PHENOTYPES = [
   },
   {
     "id": "Tronder",
-    "name": "Tr�nder",
+    "name": "Trønder",
     "group": "Nordid",
     "lat": 63.5,
     "lng": 10.5,
-    "desc": "North European type, combines features of Paleo Atlantid, Hallstatt, and East Nordid. One of the main elements in the ancient Vikings. Their nucleus lies in the Norwegian Tr�ndelag region. It also dominates in other parts of Norway as well as Iceland"
+    "desc": "North European type, combines features of Paleo Atlantid, Hallstatt, and East Nordid. One of the main elements in the ancient Vikings. Their nucleus lies in the Norwegian Trøndelag region. It also dominates in other parts of Norway as well as Iceland"
   },
   {
     "id": "TwaCwa",
@@ -1597,7 +1597,7 @@ const PHENOTYPES = [
     "group": "Amazonid",
     "lat": -5,
     "lng": -72,
-    "desc": "Amazonid subtype, the most frequent type in the Western Amazon rainforest. Common among Arawakan speakers, typical groups are Yawalapiti, Ash�ninka, Mashco-Piro, Piapoco, Wayuu, among others. Possibly originated in Colombian savannahs and expanded to"
+    "desc": "Amazonid subtype, the most frequent type in the Western Amazon rainforest. Common among Arawakan speakers, typical groups are Yawalapiti, Asháninka, Mashco-Piro, Piapoco, Wayuu, among others. Possibly originated in Colombian savannahs and expanded to"
   },
   {
     "id": "WestBambutid",
