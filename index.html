@@ -105,22 +105,22 @@
 
     .images-area {
       display: flex;
-      flex: 1;
-      min-height: 0;
+      flex-shrink: 0;
       position: relative;
       background: #090b10;
+      padding: 10px;
+      gap: 8px;
     }
 
     .img-slot {
       flex: 1;
+      aspect-ratio: 4 / 5;
       position: relative;
       overflow: hidden;
       display: flex;
       align-items: stretch;
-    }
-
-    .img-slot + .img-slot {
-      border-left: 1px solid var(--border);
+      background: #0a0c12;
+      border-radius: 4px;
     }
 
     .img-slot img {
